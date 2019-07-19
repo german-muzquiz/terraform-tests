@@ -11,3 +11,7 @@ resource "aws_s3_bucket" "bucket" {
   bucket = "${var.bucket-name}"
   acl    = "private"
 }
+
+output "bucket_arn" {
+  value = "${aws_s3_bucket.bucket.arn}"  
+}
